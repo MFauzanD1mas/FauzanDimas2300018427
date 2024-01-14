@@ -2,8 +2,46 @@
 using namespace std;
 
 char angka[10] = {'0','1','2','3','4','5','6','7','8','9'};
-int cetak_hasil();
-void papan_permainan();
+int cetak_hasil()
+{
+	if(angka[1]==angka[2] && angka[2] == angka[3])
+		return 1;
+	else if (angka[4] == angka[5] && angka[5] == angka[6])
+		return 1;
+	else if (angka[7] == angka[8] && angka[8] == angka[9])
+		return 1;
+	else if (angka[1] == angka[4] && angka[4] == angka[7])
+		return 1;
+	else if (angka[2] == angka[5] && angka[5] == angka[8])
+		return 1;
+	else if (angka[3] == angka[6] && angka[6] == angka[9])
+		return 1;
+	else if (angka[1] == angka[5] && angka[5] == angka[9])
+		return 1;
+	else if (angka[3] == angka[5] && angka[5] == angka[7])
+		return 1;
+	else if (angka[1] !='1' && angka[2] !='2' && angka[3] !='3' && angka[4] !='4' && angka[5] !='5' && angka[6] !='6' && angka[7] !='7' && angka[8] !='8' && angka[9] !='9')
+		return 0;
+	else
+		return -1;
+}
+
+void papan_permainan()
+{
+	system("cls");
+	cout <<"\n\tTic Tac Toe\n\n";
+	cout <<"Pemain 1 (X)	-    Pemain 2 (O)"<< endl <<endl;
+	cout << endl;
+	cout << "	 |	 |		"<<endl;
+	cout << "    " << angka[1] <<"    |   " << angka[2] <<"   |    " <<angka[3] << endl;
+	cout << "_________|_______|_________"<<endl;
+	cout << "	 |	 |		"<<endl;
+	cout << "    " << angka[4] <<"    |   " << angka[5] <<"   |    " <<angka[6] << endl;
+	cout << "_________|_______|_________"<<endl;
+	cout << "	 |	 |		"<<endl;
+	cout << "    " << angka[7] <<"    |   " << angka[8] <<"   |    " <<angka[9] << endl;
+	cout << "	 | 	 |		"<<endl;
+}
 
 int main()
 {
@@ -53,59 +91,3 @@ int main()
 	cin.get();
 	return 0;
 }
-
-int cetak_hasil()
-{
-	if(angka[1]==angka[2] && angka[2] == angka[3])
-		return 1;
-	else if (angka[4] == angka[5] && angka[5] == angka[6])
-		return 1;
-	else if (angka[7] == angka[8] && angka[8] == angka[9])
-		return 1;
-	else if (angka[1] == angka[4] && angka[4] == angka[7])
-		return 1;
-	else if (angka[2] == angka[5] && angka[5] == angka[8])
-		return 1;
-	else if (angka[3] == angka[6] && angka[6] == angka[9])
-		return 1;
-	else if (angka[1] == angka[5] && angka[5] == angka[9])
-		return 1;
-	else if (angka[3] == angka[5] && angka[5] == angka[7])
-		return 1;
-	else if (angka[1] !='1' && angka[2] !='2' && angka[3] !='3' && angka[4] !='4' && angka[5] !='5' && angka[6] !='6' && angka[7] !='7' && angka[8] !='8' && angka[9] !='9')
-		return 0;
-	else
-		return -1;
-}
-
-void papan_permainan()
-{
-	system("cls");
-	cout <<"\n\tTic Tac Toe\n\n";
-	cout <<"Pemain 1 (X)	-    Pemain 2 (O)"<< endl <<endl;
-	cout << endl;
-	cout << "	 |	 |		"<<endl;
-	cout << "    " << angka[1] <<"    |   " << angka[2] <<"   |    " <<angka[3] << endl;
-	cout << "_________|_______|_________"<<endl;
-	cout << "	 |	 |		"<<endl;
-	cout << "    " << angka[4] <<"    |   " << angka[5] <<"   |    " <<angka[6] << endl;
-	cout << "_________|_______|_________"<<endl;
-	cout << "	 |	 |		"<<endl;
-	cout << "    " << angka[7] <<"    |   " << angka[8] <<"   |    " <<angka[9] << endl;
-	cout << "	 | 	 |		"<<endl;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
